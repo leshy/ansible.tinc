@@ -21,16 +21,14 @@
 # systemd
 - name: reload tinc - systemd
   service:
-    name: "tinc@{{ item.vpn }}.service"
+    name: "tinc.service"
     state: reloaded
-  with_items: tinc_vpn
   become: yes
   become_method: sudo
 
 - name: restart tinc - systemd
   service:
-    name: "tinc@{{ item.vpn }}.service"
+    name: "tinc.service"
     state: restarted
-  with_items: tinc_vpn
   become: yes
   become_method: sudo

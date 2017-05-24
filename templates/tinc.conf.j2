@@ -7,5 +7,3 @@ Mode=switch
 ConnectTo={{ server.name }}
 {% endif %}
 {% endfor %}
-{% if tinc_cipher|d() and tinc_cipher %}Cipher={{ tinc_cipher }}{% endif %}
-{% if tinc_digest|d() and tinc_digest %}Digest={{ tinc_digest }}{% endif %}
